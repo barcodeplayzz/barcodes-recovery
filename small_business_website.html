@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barcodes Recovery</title>
+  <style>
+    :root {
+      --bg: #0b0f0b;
+      --text: #e9fdee;
+      --muted: #b9d9bf;
+      --accent: #39ff14;
+      --accent-2: #00c853;
+      --panel: rgba(17, 17, 17, 0.85);
+      --border: rgba(57, 255, 20, 0.35);
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      background-image:
+        radial-gradient(50% 80% at 80% 0%, rgba(57,255,20,0.08), transparent 60%),
+        radial-gradient(50% 80% at 20% 100%, rgba(0,200,83,0.08), transparent 60%);
+      background-attachment: fixed;
+    }
+    header {
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('assets/hero-barcodes-recovery.jpg');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 18px rgba(57,255,20,0.6);
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.15rem;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    nav {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(4px);
+      padding: 0.8rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--text);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: var(--text);
+      text-shadow: 0 0 10px rgba(57,255,20,0.25);
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--panel);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4), 0 0 18px rgba(57,255,20,0.09);
+    }
+    .card h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .price {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      font-weight: 900;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent-2) 70%);
+      color: #121212;
+      border: 2px solid rgba(57,255,20,0.6);
+      box-shadow: 0 0 18px rgba(57,255,20,0.5), inset 0 0 8px rgba(255,255,255,0.25);
+    }
+    
+    footer {
+      background: #0a0a0a;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #121212;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 800;
+      box-shadow: 0 0 14px rgba(57,255,20,0.35);
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      align-items: start;
+    }
+    .gallery figure {
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4), 0 0 18px rgba(57,255,20,0.09);
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .gallery figcaption {
+      padding: 0.75rem 0.9rem;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Barcodes Recovery</h1>
+    <p>GTA5 Enhanced & Legacy Version (PC Only)</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Write a short paragraph about your business here. Explain what you do,
+        who you serve, and what makes you different from others.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Recovery Options</h2>
+      <div class="services">
+        <div class="card" data-amount="5">
+          <h3><span class="price">$5</span> Basic Recovery</h3>
+          <ul>
+            <li>+10 Million Cash</li>
+            <li>Level 120</li>
+            <li>Max Stats</li>
+            <li>+15 Cars</li>
+          </ul>
+          <div id="paypal-container-YDFPEZQ4DUGDQ"></div> 
+          <script> 
+            paypal.HostedButtons({ 
+              hostedButtonId: "YDFPEZQ4DUGDQ", 
+            }).render("#paypal-container-YDFPEZQ4DUGDQ") 
+          </script>
+          <a class="btn" href="https://www.paypal.com/ncp/payment/YDFPEZQ4DUGDQ" target="_blank" rel="noopener">Pay $5 via PayPal</a>
+          
+        </div>
+        <div class="card" data-amount="10">
+          <h3><span class="price">$10</span> Sonic Recovery</h3>
+          <ul>
+            <li>+20 Million Cash</li>
+            <li>Level 220</li>
+            <li>+10 Custom Cars</li>
+            <li>+5 Outfits</li>
+            <li>Max Stats</li>
+          </ul>
+          <div id="paypal-container-UGCP2Z34P938S"></div> 
+          <script> 
+            paypal.HostedButtons({ 
+              hostedButtonId: "UGCP2Z34P938S", 
+            }).render("#paypal-container-UGCP2Z34P938S") 
+          </script>
+          <a class="btn" href="https://www.paypal.com/ncp/payment/UGCP2Z34P938S" target="_blank" rel="noopener">Pay $10 via PayPal</a>
+          
+        </div>
+        <div class="card" data-amount="20">
+          <h3><span class="price">$20</span> Premium Recovery</h3>
+          <ul>
+            <li>+25 Million Cash</li>
+            <li>Any Rank</li>
+            <li>+10 Outfits</li>
+            <li>Unlock All</li>
+            <li>Max Skills</li>
+          </ul>
+          <a class="btn" href="https://www.paypal.com/ncp/payment/F43HG9V3888RJ" target="_blank" rel="noopener">Pay $20 via PayPal</a>
+          
+        </div>
+        <div class="card" data-amount="35">
+          <h3><span class="price">$35</span> Ultimate Recovery</h3>
+          <ul>
+            <li>+50 Million Cash</li>
+            <li>Any Rank</li>
+            <li>+25 Cars</li>
+            <li>+10 Outfits</li>
+            <li>Max Skills</li>
+          </ul>
+          <div id="paypal-container-YGPWTY2KBL6YE"></div> 
+          <script> 
+            paypal.HostedButtons({ 
+              hostedButtonId: "YGPWTY2KBL6YE", 
+            }).render("#paypal-container-YGPWTY2KBL6YE") 
+          </script>
+          <a class="btn" href="https://www.paypal.com/ncp/payment/YGPWTY2KBL6YE" target="_blank" rel="noopener">Pay $35 via PayPal</a>
+          
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> (555) 123-4567</p>
+      <p><strong>Email:</strong> yourbusiness@email.com</p>
+      <p><strong>Location:</strong> Your City, State</p>
+      <a class="btn" href="mailto:yourbusiness@email.com">Get in Touch</a>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Your Business Name</p>
+    <p>All rights reserved.</p>
+  </footer>
+
+  
+</body>
+</html>
